@@ -8,7 +8,7 @@ CMD /bin/bash
 RUN yum install -y httpd
 RUN yum install -y zip
 RUN yum install -y unzip
-COPY /tmp/photogenic.zip /var/www/html/
+COPY photogenic.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN sh -c 'unzip -q "*.zip"'
 RUN cp -rvf photogenic/* .
